@@ -2,14 +2,14 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.options import Options
 from bs4 import BeautifulSoup
-
+import time
 
 
 # To prevent window from opening: use module Options
 
 # If I wanted to create a object of the class Options
 chrome_options = Options()
-chrome_options.add_argument("--headless")
+#chrome_options.add_argument("--headless")
 
 # Localing the driver
 PATH = "C://Drivers/chromedriver.exe"
@@ -20,6 +20,9 @@ driver = webdriver.Chrome(PATH,options=chrome_options) # this second parameter i
 # accessing google page using function "get"
 driver.get("http://google.com")
 
+#waiting one second for the web broser open the page
+time.sleep(1)
+
 # variável criada para referenciar o elemento da página que se refere a caixa de pesquisa
 search_input = driver.find_element_by_xpath("/html/body/div[1]/div[3]/form/div[1]/div[1]/div[1]/div/div[2]/input")
 # Para esse link, cliquei o google/inspecionar/select an element in the page to inspect it
@@ -29,6 +32,9 @@ search_input.send_keys("wikipedia english")
 
 # Using usando method send_keys to press ENTER
 search_input.send_keys(Keys.ENTER)
+
+#waiting one second so the web broser has enough time to change to another page
+time.sleep(1)
 
 # Identify the current page using method current_url
 page_url = driver.current_url
@@ -69,15 +75,7 @@ for r in result_list:
     # printing links
     print(r.find("a")['href'])
 
-# # accessing google page using function "get"
 
-# driver.get("https://en.wikipedia.org/wiki/Main_Page")
-#
-#
-#
-#
-#
-#
-#
+driver.close()
 
 
