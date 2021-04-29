@@ -15,20 +15,20 @@ Scraping Bot to access Google page and write "wikipedia english" in the search b
 ### Approach (aristotle.py)  
 
 *   PART 1: Initializations
-    1.1. Preventing the browser window from opening
-    1.2. Localizing the driver
-    1.3. Configuring the driver so that selenium can manipulate the navigator
+  -  1.1. Preventing the browser window from opening
+  -  1.2. Localizing the driver
+  -  1.3. Configuring the driver so that selenium can manipulate the navigator
 
 *   PART 2: Accessing Wikipedia
-    2.1. Accessing Wikipedia page using function "get"
-    2.2. Waiting one second for the web browser to open the page
-    2.3. Creating a variable to receive the path for the search box
-    2.4. Using the method send_keys to write in the search box and press "enter"
-    2.5. Waiting one second so the web browser has enough time to change to another page
-    2.6. Saving xpath in a variable
-    2.7. Using the method send_keys to write in the search box
-    2.8. Waiting one second for the web browser to open the page
-    2.9. Printing the first paragraph in the page
+   - 2.1. Accessing Wikipedia page using function "get"
+   - 2.2. Waiting one second for the web browser to open the page
+   - 2.3. Creating a variable to receive the path for the search box
+   - 2.4. Using the method send_keys to write in the search box and press "enter"
+   - 2.5. Waiting one second so the web browser has enough time to change to another page
+   - 2.6. Saving xpath in a variable
+   - 2.7. Using the method send_keys to write in the search box
+   - 2.8. Waiting one second for the web browser to open the page
+   - 2.9. Printing the first paragraph in the page
 
 
 ### Resources
