@@ -40,6 +40,8 @@ Here are the steps I followed for scraping:
     
 ## Approach (aristotle.py)  
 
+This file contains a Scraping Bot to access Wikipedia main page then write Aristotle in the search box. The goal was to print the first paragraph of the page, which describe who was Aristotle. 
+
 #####   Part 1: Initializations
     1.1. Preventing the browser window from opening
     1.2. Localizing the driver
@@ -59,6 +61,12 @@ Here are the steps I followed for scraping:
 
 ### Resources
 
-Sahin, Kevin (Feb, 2021) Web Scraping using Selenium and Python. Available from: https://www.scrapingbee.com/blog/selenium-python/
+ The following articles were a helpful reference for this project:
 
-Sahin, Kevin (Mar, 2021) Web Scraping 101 with Python. Available from: https://www.scrapingbee.com/blog/web-scraping-101-with-python/
+ Gray, Dave (Apr, 2018) Better web scraping in Python with Selenium, Beautiful Soup, and pandas. Available from: https://www.freecodecamp.org/news/better-web-scraping-in-python-with-selenium-beautiful-soup-and-pandas-d6390592e251/
+
+ Sahin, Kevin (Feb, 2021) Web Scraping using Selenium and Python. Available from: https://www.scrapingbee.com/blog/selenium-python/
+
+ Sahin, Kevin (Mar, 2021) Web Scraping 101 with Python. Available from: https://www.scrapingbee.com/blog/web-scraping-101-with-python/
+
+
