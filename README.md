@@ -1,6 +1,8 @@
 # Web Scraping using Selenium and Python 
 
-This is a small project of a Scraping Bot with Selenium and Python. 
+This is a small personal project of a Scraping Bot with Selenium and Python. 
+
+
  
 
 ### Resources
