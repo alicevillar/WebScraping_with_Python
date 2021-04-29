@@ -1,4 +1,4 @@
-# Web Scraping using Selenium and Python 
+# Web Scraping with Python: using Selenium and Beautiful Soup
 
 This is a small personal project of two Scraping Bots in Python using Selenium and Beautiful Soup Scraping Libraries.
 
