@@ -3,46 +3,75 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.options import Options
 import time
 
+###########################################################################################
+#
+#   PART 1: Initializations
+#   1.1. Preventing the browser window from opening
+#   1.2. Localizing the driver
+#   1.3. Configuring the driver so that selenium can manipulate the navigator
+#
+###########################################################################################
 
-# To prevent window from opening: use module Options
-# Creating an object of the class Options
+# PART 1.1 - Preventing window from opening
+
+# Create an object of the class Options and adding the argument --headless to invoke Chrome in headless mode
 chrome_options = Options()
 chrome_options.add_argument("--headless")
 
-# Localizing the driver
+# PART 1.2 - Localizing the driver
+# Setting the path
 PATH = "C://Drivers/chromedriver.exe"
 
-# Configuring the driver so that selenium can manipulate the navigator
-driver = webdriver.Chrome(PATH) #options=chrome_options  => this second parameter is optional (to prevent window from opening)
+# PART 1.3 - Configuring the driver so that selenium can manipulate the navigator
+driver = webdriver.Chrome(PATH) # I can include "chrome_options" as a second parameter to prevent window from opening)
 
-# Accessing Google page using function "get"
+
+###########################################################################################
+#
+#   PART 2: Accessing Wikipedia
+#   2.1. Accessing Wikipedia page using function "get"
+#   2.2. Waiting one second for the web browser to open the page
+#   2.3. Creating a variable to receive the path for the search box
+#   2.4. Using the method send_keys to write in the search box and press "enter"
+#   2.5. Waiting one second so the web browser has enough time to change to another page
+#   2.6. Saving xpath in a variable
+#   2.7. Using the method send_keys to write in the search box
+#   2.8. Waiting one second for the web browser to open the page
+#   2.9. Printing the first paragraph in the page
+#
+###########################################################################################
+
+
+# PART 2.1. Accessing Wikipedia page using function "get"
 driver.get("https://en.wikipedia.org/wiki/Main_Page")
 
-# Waiting one second for the web browser to open the page
+# PART 2.2. Waiting one second for the web browser to open the page
 time.sleep(1)
 
-# Creating variable to receive the path for the search box
+# PART 2.3. Creating a variable to receive the path for the search box
 search_input=driver.find_element_by_xpath('//*[@id="searchInput"]')
 
-# Using the method send_keys to write in the search box
+# PART 2.4. Using the method send_keys to write in the search box and press enter
 search_input.send_keys("Aristotle")
 
 # Pressing enter
 search_input.send_keys(Keys.ENTER)
 
-# Waiting one second so the web broser has enough time to change to another page
+# PART 2.5. Waiting one second so the web browser has enough time to change to another page
 time.sleep(1)
 
+# PART 2.6. Saving xpath in a variable
 found = driver.find_element_by_xpath("//*[@id='mw-content-text']/div[3]/ul/li[1]/div[1]/a")
 
-# Using the method send_keys to write in the search box
+# PART 2.7. Using the method send_keys to write in the search box
 found.click()
 
-# Waiting one second for the web browser to open the page
+# PART 2.8. Waiting one second for the web browser to open the page
 time.sleep(1)
 
-first_paragraph=driver.find_element_by_xpath("//*[@id='mw-content-text']/div[1]/p[3]")
+# PART 2.9.Printing the first paragraph in the page
 
+first_paragraph=driver.find_element_by_xpath("//*[@id='mw-content-text']/div[1]/p[3]")
 print(first_paragraph.get_attribute("innerText"))
 
 
