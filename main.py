@@ -82,7 +82,7 @@ driver.quit()
 #   3.3. Getting part of the tag
 #   3.4. Using method find all
 #   3.5. Using For Loop because the content is a set
-#   3.6. Stopping the loop and closing the browser
+#   3.6. Closing the browser
 
 ###########################################################################################
 
