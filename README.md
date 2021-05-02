@@ -30,7 +30,7 @@ Here are the steps I followed for scraping:
     2.9. Automatically closing the window
 
 
-#####   Part 3: Accessing Google
+#####   Part 3: Web Scrapping with Beautiful Soup
     3.1. Accessing Google page using function "get"
     3.2. Using method "find" in three steps
     3.3. Getting part of the tag
